@@ -1,21 +1,30 @@
 {
-  "name": "bookstoreapi",
+  "name": "bookstore-workspace",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "PageTurn Full-Stack Book Store Web Application",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "start": "npm --prefix server start",
+    "dev": "npm --prefix server run dev",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "client:dev": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "test:pricing": "npm --prefix server run test:pricing",
+    "test:qa": "npm --prefix server run test:qa",
+    "test:covers": "npm --prefix server run test:covers"
   },
-  "keywords": [],
+  "keywords": [
+    "bookstore",
+    "ecommerce",
+    "react",
+    "express",
+    "mongodb",
+    "nodejs"
+  ],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  },
-  "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "mongoose": "^9.9.1"
-  }
+  "license": "ISC"
 }
